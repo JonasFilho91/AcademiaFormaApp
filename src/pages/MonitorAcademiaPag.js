@@ -1,6 +1,8 @@
 function MonitorAcademiaPag() {
     return (
-        <>  </>
+        <>
+        <h1>MonitorAcademiaPag</h1>
+       </>
 
     )
 

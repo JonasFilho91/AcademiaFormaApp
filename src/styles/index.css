@@ -2,13 +2,9 @@
   
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 80%;
   box-sizing: border-box;
   color: #ffffff;
   font-family: 'Dosis';
-  justify-items: center;
-  align-items: center;
 
 }
 
@@ -16,6 +12,7 @@
 
 html, body, #root {
   height: 100%;
+  width: 100%;
   background-color: #222;
   display: flex;
   justify-content: center;
@@ -23,7 +20,8 @@ html, body, #root {
   flex-direction: column;
 
   --global-font-family-Varela-Round: "Varela Round", sans-serif;
-    
+  --global-font-family-Dosis: "Dosis", sans-serif;
+  font-size:x-large;    
   --global-color-Vermelho-logo:       rgba(255, 0, 0);
   --global-color-azul-claro:          rgb(25, 136, 255);
   --global-color-Preto-logo:          rgba(0, 0, 0);
@@ -31,7 +29,8 @@ html, body, #root {
 }
 
 .ConteinerPrincipal{
-  width: 80%;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   color: #000000;
@@ -66,4 +65,30 @@ th{
 }
 
 
+.divFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.divContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+}
 
+.title{
+  width: 100%;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: var(--global-font-family-Dosis);
+}

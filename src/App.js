@@ -1,10 +1,12 @@
 // Import Parse minified version
 import Parse from 'parse/dist/parse.min.js';
-import TabelaView from './componentes/TABELA/TabelaView';
-import Navbar from './componentes/layouts/Navbar';
+//Import styles
 import './styles/index.css';
-//import { PersonComponent } from './PersonComponent';
+import AppRoutes from './AppRoutes.jsx';
+/*import Cabecalho from './componentes/layouts/Cabecalho';
+import TesteOn from './componentes/TesteOn.js';*/
 
+  //import { PersonComponent } from './PersonComponent';
 
    // Your Parse initialization configuration goes here
    const PARSE_APPLICATION_ID = 'O44FbeKcZNWC2JOxOQrqZWA8YIPmIBRqvFH0hPfg';
@@ -16,13 +18,7 @@ import './styles/index.css';
 
 function App() {
   return (
-    
-    <div>
-    
-    <div className='ConteinerPrincipal'>
-      <TabelaView/>
-    </div>
-    </div>
+    <AppRoutes/>
   );
 }
 

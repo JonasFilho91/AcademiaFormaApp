@@ -1,6 +1,8 @@
 function FiliaisManagePag() {
     return (
-        <>  </>
+        <>
+        <h1>FiliaisManagePag</h1>
+       </>
 
     )
 

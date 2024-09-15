@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --global-font-family-Varela-Round: "Varela Round", sans-serif;
+    --global-color-Preto:               rgb(0, 0, 0);
+    --global-color-azul-extra-claro:    hsl(189, 100%, 95%);
+    --global-color-azul-claro:          rgb(30, 140, 255);
+    --global-color-azul-escuro:         rgba(255, 51, 153, 0.95);
+    --global-color-fundo:               azure;  
+        
+}
+
+    body{
+        width: 100%;}
+    
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
+
+.html-home{
+    height: 300vh;
+    min-width: 545px;}
+
+#html-login{
+    width: 100vw;
+    min-width: 545px;
+    max-height: 90vh;
+    min-height: 320px;}
+
+.conteiner-card{
+    min-width: 800px;
+    height: 85vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.conteiner{
+    max-width: 1280px;
+    height: 100%;
+    margin: auto;
+    padding: 0px 5%;}
+
+.flex{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    justify-items: auto;}
+#link-logo{
+    display: flex;
+    align-items: center;
+    flex: 2 0 auto;}
+    
+.imd_logo{
+height: 80%;
+max-height: 100px;}
+
+#nav-menu-navegacao{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex: 1 0 0;
+}
+
+#nav{
+
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+}
+
+nav a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--global-color-fundo);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.3s;}
+
+nav a:hover::after{
+    width: 100%;}
+
+.btm-login a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;}
+
+.btm-login button{
+    font-family: "Varela Round", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    width: 120px;
+    height: 60%;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--global-color-fundo);
+    color: var(--global-color-azul-escuro);
+    cursor: pointer;
+    transition: .2s;}
+
+.btm-login-no{
+    width: calc(".btm-login butoon");}
+
+#home-main{
+    height: 100vh;
+    margin-top: 12vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgb(0, 0, 0, 0),rgb(125, 225, 255),rgba(0, 0, 0, 0));}
+
+.conteiner-card{
+    min-width: 80vw;
+    height: 85vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color:rgb(219, 219, 219);
+}
+.content{
+    margin: auto;
+    height: 50%;
+    background-color:var(--global-color-fundo);
+    border-radius: 15px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: 1s;
+}
+
+.content1::before{
+    content: " ";
+    position: absolute;
+    background-color: var(--global-color-azul-escuro);
+    
+    width: 50%;
+    height: 100%;
+}
+
+.title{
+    font-family: "Varela Round", sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.title-primary{
+    color:var(--global-color-azul-extra-claro);
+}
+
+.title-second{
+    color:var(--global-color-azul-escuro);}
+
+.description{
+    font-family: "Varela Round", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    color: var(--global-color-azul-claro);
+    text-align: center;}
+
+.first-content{
+    max-width: 80%;
+    min-width: 50%;
+    display: flex;                             }
+
+.first-column{
+    height: 100%;
+    width: 39%;
+    min-width: 39%;
+    background-color: var(--global-color-azul-escuro);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+
+.second-column{
+
+    width: 70%;
+    max-width: 60%;
+    height: 80%;
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-entrar{
+    width: 100%;
+    max-width: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-socialmidia{
+    display: flex;
+    list-style-type: none;
+}
+
+.form-etrar-cadastrar{
+    display: flex;
+    flex-direction: column;
+}
+
+.second-content{
+    position: absolute;
+    display: none;
+}
+
+
+.description{
+    font-family: "Varela Round", sans-serif;
+    font-weight: 1000;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    color: var(--global-color-Preto);
+    text-align: center;
+}

@@ -1,10 +1,18 @@
 import '../../styles/index.css';
+import '../../styles/estilos_JF.css';
 import LinhaTabelaView from './LinhaTabelaView';
-function TabelaView() {
+import Btngeral from '../layouts/Btngeral';
+
+function TabelaView(Pesquisar) {
     
+    
+
     return (
         <div className='ConteinerPrincipal'>
-            <input type="text" placeholder="Pesquisar"/>
+            <div>
+            <input className="input" type="text" placeholder="Pesquisar"/>
+            <div><Btngeral/></div>
+            </div> 
             <table ClassName='tabela'>
             <tr hehgt="10px">
                 <th>Id_Funcionario</th>
@@ -13,9 +21,10 @@ function TabelaView() {
                 <th>Endereço</th>
                 <th>cargo</th>
             </tr>  
+                {
                 <LinhaTabelaView/>
-                <LinhaTabelaView/>
-                <LinhaTabelaView/>                     
+                }
+                              
             </table>
         </div>
     )
