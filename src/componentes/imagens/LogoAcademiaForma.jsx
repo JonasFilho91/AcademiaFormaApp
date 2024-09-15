@@ -1,5 +1,5 @@
 //importe Imagems
-import logo from './Imagens/LogoAcademiaForma.png';
+import logo from './LogoAcademiaForma.png';
 
 function LogoAcademiaForma() {
     return (
