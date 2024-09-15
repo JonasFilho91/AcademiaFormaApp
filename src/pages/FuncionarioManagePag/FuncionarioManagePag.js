@@ -15,10 +15,10 @@ function FuncionarioManagePag() {
                 <nav>
                 <ul className="nav">
                   <li>
-                     <a>Página inicial</a>
+                     Página inicial
                   </li>
                   <li>
-                     <a>Funcionário</a>
+                     Funcionário
                   </li>
                 </ul>
               </nav>

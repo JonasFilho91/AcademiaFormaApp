@@ -20,7 +20,7 @@ function HeaderOfPage() {
             </div>
             <div id="nav-menu-navegacao">
               <nav>
-                <ul id="nav">
+                <ul >
                   <li>
                     <Link to="/HomePag"> Página inicial</Link>
                   </li>

@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePag from "./pages/HomePag";
 import MonitorAcademiaPag from "./pages/MonitorAcademiaPag";
-import ClientesLog from "./pages/ClientesLog";
+import ClientesLog from "./pages/ClientesLog/ClientesLog";
 import VagaEstacionamentoManagePag from "./pages/VagaEstacionamentoManagePag";
 import LoginGerenciaPag from "./pages/LoginGerenciaPag";
 import AcademiaManagePag from "./pages/AcademiaManagePag";
-import FiliaisManagePag from "./pages/FiliaisManagePag";
+import FiliaisManagePag from "./pages/FiliaisManagePag/FiliaisManagePag";
 import LojaManagePag from "./pages/LojaManagePag";
 import PlanosManagePag from "./pages/PlanosManagePag";
 import VagaEstacionamentoLog from "./pages/VagaEstacionamentoLog";
