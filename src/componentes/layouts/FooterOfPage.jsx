@@ -4,7 +4,7 @@ import '../../styles/estilos_JF.css';
 import '../../styles/FooterOfPage.modulo.css';
 
 //import componentes
-import LogoAcademiaForma from '../LogoAcademiaForma.jsx';
+import LogoAcademiaForma from '../Imagens/LogoAcademiaForma.jsx';
 //import { Link } from 'react-router-dom';
 //import './Navbar.css';
 function FooterOfPage() {

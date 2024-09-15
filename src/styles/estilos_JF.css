@@ -76,19 +76,23 @@ max-height: 100px;}
     flex-direction: row;
 }
 
-nav a::after{
-    content: " ";
-    width: 0%;
-    height: 2px;
-    border-radius: 2px;
-    background-color: var(--global-color-fundo);
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    transition: 0.3s;}
 
-nav a:hover::after{
-    width: 100%;}
+    nav div::after{
+        content: " ";
+        width: 0%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--global-color-fundo);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transition: 0.3s;}
+
+        nav div:hover::after{
+            width: 100%;}
+
+
+
 
 .btm-login a{
     display: flex;
@@ -237,4 +241,8 @@ nav a:hover::after{
     line-height: 20px;
     color: var(--global-color-Preto);
     text-align: center;
+}
+
+.li{
+    margin: 10px 0;
 }

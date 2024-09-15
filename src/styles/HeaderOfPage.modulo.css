@@ -52,3 +52,18 @@ header ul li a{
 
 #header-home.rolagem a{
     color:rgb(255, 255, 255);}
+
+    nav a::after{
+        content: " ";
+        width: 0%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--global-color-fundo);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        transition: 0.3s;}
+    
+    
+    nav a:hover::after{
+        width: 100%;}
