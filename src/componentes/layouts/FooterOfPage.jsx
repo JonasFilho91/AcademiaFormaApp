@@ -4,14 +4,13 @@ import '../../styles/estilos_JF.css';
 import '../../styles/FooterOfPage.modulo.css';
 
 //import componentes
-import LogoAcademiaForma from '../Imagens/LogoAcademiaForma.jsx';
+//import LogoAcademiaForma from '../Imagens/LogoAcademiaForma.jsx';
 //import { Link } from 'react-router-dom';
 //import './Navbar.css';
 function FooterOfPage() {
     return (
       <>
           <footer className="footer">
-            <LogoAcademiaForma/>
             <h1>AcademiaForma</h1>
           </footer>
           </>
