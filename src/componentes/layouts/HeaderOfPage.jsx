@@ -10,7 +10,7 @@ function HeaderOfPage() {
         <div className="conteiner">
           <div className="flex">
             <div className="logoConteiner">
-              <Link to="/HomePag">
+              <Link to="/">
                 <img
                   className="logo"
                   src={logo}//logo
@@ -22,7 +22,7 @@ function HeaderOfPage() {
               <nav>
                 <ul >
                   <li>
-                    <Link to="/HomePag"> Página inicial</Link>
+                    <Link to="/"> Página inicial</Link>
                   </li>
                 </ul>
               </nav>
