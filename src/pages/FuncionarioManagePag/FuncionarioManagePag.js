@@ -7,7 +7,7 @@ import '../../styles/index.css';
 //import componentes
 import HeaderOfPage from '../../componentes/layouts/HeaderOfPage';
 import CadastroFuncionario from './CadastroFuncionario';
-import ConsultaFuncionario from './ConsultaFuncionario';
+//import ConsultaFuncionario from './ConsultaFuncionario';
 import { useState } from 'react';
 function FuncionarioManagePag() {
     
