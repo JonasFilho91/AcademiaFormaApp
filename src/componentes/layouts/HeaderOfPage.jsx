@@ -2,7 +2,7 @@ import '../../styles/index.css';
 import '../../styles/HeaderOfPage.modulo.css';
 import '../../styles/logo.modulo.css';
 import { Link } from 'react-router-dom';
-//import logo from '../Imagens/LogoAcademiaForma.jsx';
+import LogoAcademiaForma from '../LogoAcademiaForma.jsx';
 //import './Navbar.css';
 function HeaderOfPage() {
     return (
@@ -11,18 +11,14 @@ function HeaderOfPage() {
           <div className="flex">
             <div className="logoConteiner">
               <Link to="/">
-                  {/*<img
-                  className="logo"
-                  src={logo}//logo
-                  alt="logo"*/}
-                />
+                  <LogoAcademiaForma/>
               </Link>
             </div>
             <div id="nav-menu-navegacao">
               <nav>
                 <ul >
                   <li>
-                    <Link to="/"> Página inicial</Link>
+                    <Link to="/">Página inicial</Link>
                   </li>
                 </ul>
               </nav>

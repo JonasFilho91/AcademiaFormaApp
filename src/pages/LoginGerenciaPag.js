@@ -4,7 +4,7 @@ import '../styles/index.css';
 
 //import componentes
 import HeaderOfPage from '../componentes/layouts/HeaderOfPage.jsx';
-import TesteOn from '../componentes/TesteOn.js';
+import CardLogin from '../componentes/CardLogin.js';
 import FooterOfPage from '../componentes/layouts/FooterOfPage.jsx';
 
 
@@ -13,7 +13,7 @@ function LoginGerenciaPag() {
         <>
             <div className='ConteinerPrincipal'>
                 <HeaderOfPage />
-                <div><TesteOn /></div>
+                <div><CardLogin/></div>
                 <FooterOfPage />
             </div>
         </>

@@ -67,3 +67,11 @@ header ul li{
     
     nav a:hover::after{
         width: 100%;}
+
+
+    .nav   a {
+        color: var(--global-color-azul-escuro);
+        text-decoration: none;
+         
+
+        }

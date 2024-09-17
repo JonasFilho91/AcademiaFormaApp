@@ -1,12 +1,13 @@
 //import style
 import '../styles/estilos_JF.css';
 import '../styles/index.css';
-import FormLogin from './layouts/FormLogin.jsx';
+import '../styles/index.css';
 
 //import componentes
+import FormLogin from './layouts/FormLogin.jsx';
 
 
-function TesteOn() {
+function CardLogin() {
         return (
         <>
         <div className="conteiner-card">
@@ -26,4 +27,4 @@ function TesteOn() {
     )
 }
 
-export default TesteOn;
+export default CardLogin;

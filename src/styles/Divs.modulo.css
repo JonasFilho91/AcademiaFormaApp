@@ -18,6 +18,21 @@
     border-bottom: 1px solid var(--global-color-azul-claro);
 }
 
+.divNave a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--global-color-fundo);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.3s;}
+
+
+    .divNave a:hover::after{
+    width: 100%;}
+
 .divFlex {
     display: flex;
     flex-direction: column;
@@ -37,4 +52,23 @@
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
+    
+}
+
+.divMenuNave{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid var(--global-color-azul-claro);
+    border-left: 1px solid var(--global-color-azul-claro);
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.logoConteiner{
+    width: 70%;
+    height: 100%;
+    display: flex;
 }

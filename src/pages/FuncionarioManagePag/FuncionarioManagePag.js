@@ -9,6 +9,7 @@ import HeaderOfPage from '../../componentes/layouts/HeaderOfPage';
 import CadastroFuncionario from './CadastroFuncionario';
 //import ConsultaFuncionario from './ConsultaFuncionario';
 import { useState } from 'react';
+import FooterOfPage from '../../componentes/layouts/FooterOfPage';
 function FuncionarioManagePag() {
     
 const [index, setIndex] = useState(0);
@@ -16,7 +17,7 @@ const [index, setIndex] = useState(0);
     return (
         <>
             <HeaderOfPage />
-            <div>
+            <div className="divNave">
                 <h3>Funcionário</h3>
             </div>
             <div className="divNave">
@@ -36,6 +37,7 @@ const [index, setIndex] = useState(0);
                         </div>}
                 </div>
             </div>
+            <FooterOfPage />
         </>
     )
 

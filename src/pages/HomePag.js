@@ -4,7 +4,7 @@ import '../styles/index.css';
 
 //import componentes
 import HeaderOfPage from '../componentes/layouts/HeaderOfPage.jsx';
-//import FooterOfPage from '../componentes/layouts/FooterOfPage.jsx';
+import FooterOfPage from '../componentes/layouts/FooterOfPage.jsx';
 //import ButtonForm from '../componentes/layouts/ButtonForm.jsx';
 import { Link } from 'react-router-dom';
 //import { useState } from 'react';
@@ -16,16 +16,13 @@ function HomePag() {
     return (
         <>
             <HeaderOfPage />
-            <div>
-                <h3>Painel de Controle</h3>
-            </div>
             <div className="divNave">
-            <Link className='btn' to="/LoginGerenciaPag"> <button className="btn btn-entrar" >Logar</button></Link>
-            <Link className='btn' to="/MonitorAcademiaPag"> <button className="btn btn-entrar">Monitorar Academia</button></Link>
-                
+            <Link className="divMenuNave" to="/LoginGerenciaPag">Logar</Link>
+            <Link className="divMenuNave" to="/MonitorAcademiaPag">Monitorar</Link>
             </div>
             <div className='divSubCabecalho'>
             </div>
+           <FooterOfPage />
         </>
     )
 
