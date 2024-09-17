@@ -2,7 +2,7 @@ import '../../styles/index.css';
 import '../../styles/HeaderOfPage.modulo.css';
 import '../../styles/logo.modulo.css';
 import { Link } from 'react-router-dom';
-import logo from '../Imagens/Logo.png';
+import logo from '../Imagens/LogoAcademiaForma.jsx';
 //import './Navbar.css';
 function HeaderOfPage() {
     return (
