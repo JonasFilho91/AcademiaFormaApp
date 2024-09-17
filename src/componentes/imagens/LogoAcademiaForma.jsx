@@ -1,13 +1,13 @@
 //importe Imagems
-import logo from './Logo.png';
+//import logo from './Logo.png';
 
 function LogoAcademiaForma() {
     return (
         <>
-        <img
+            {/*  <img
             src={logo}//logo
             alt="logo"
-            title='Logo da academia Forma'
+            title='Logo da academia Forma'*/}
         />
         </>
     )
