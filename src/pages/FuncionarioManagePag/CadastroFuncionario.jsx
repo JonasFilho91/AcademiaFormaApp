@@ -1,4 +1,5 @@
 //import style
+import '../../styles/Divs.modulo.css';
 import '../../styles/estilos_JF.css';
 import '../../styles/index.css';
 
@@ -18,15 +19,15 @@ function CadastroFuncionario() {
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-            <h1>Cadastro de Funcionário</h1>
-            </div >
-            <div>
-            <input class="input" type="text" placeholder="Nome" {...register("Nome")}/>
-            <input class="input" type="number" placeholder="CPF" {...register("CPF")}/>
-            <input class="input" type="text" placeholder="Cargo" {...register("Cargo")}/>
-            <input class="input" type="email" placeholder="Email" {...register("Email")}/>
-            <input class="input" type="text" placeholder="Endereço" {...register("Endereço")}/>
+            <div className="divflex">
+            <h3 className="title">Cadastro de Funcionário</h3>
+            </div>
+            <div className="divFlex">
+                <input className="input" type="text" placeholder="Nome" {...register("Nome")}/>
+                <input className="input" type="number" placeholder="CPF" {...register("CPF")}/>
+                <input className="input" type="text" placeholder="Cargo" {...register("Cargo")}/>
+                <input className="input" type="email" placeholder="Email" {...register("Email")}/>
+                <input className="input" type="text" placeholder="Endereço" {...register("Endereço")}/>
             <ButtonForm type="submit" Descricao="Cadastrar"/>
             </div>
         </form>

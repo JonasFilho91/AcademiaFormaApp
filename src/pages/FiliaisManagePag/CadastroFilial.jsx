@@ -1,6 +1,6 @@
 //import style
-import '../../../styles/estilos_JF.css';
-import '../../../styles/index.css';
+import '../../styles/estilos_JF.css';
+import '../../styles/index.css';
 
 //import componentes
 //import InputForm from '../../componentes/layouts/InputForm';
