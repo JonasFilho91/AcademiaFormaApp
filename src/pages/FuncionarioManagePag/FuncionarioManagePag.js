@@ -32,7 +32,7 @@ const [index, setIndex] = useState(0);
                         </div>}
                     {index === 0 &&
                         <div className="CardConsulta">
-                            <ConsultaFuncionario />
+                            {/*<ConsultaFuncionario />*/}
                         </div>}
                 </div>
             </div>
