@@ -1,0 +1,14 @@
+.footer{
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--global-color-Preto);
+    color: var(--global-color-azul-escuro);
+    border-top: 5px solid var(--global-color-azul-escuro);
+    padding-block: 0.5rem;
+    font-size: 12px;
+    box-sizing: border-box;
+}
