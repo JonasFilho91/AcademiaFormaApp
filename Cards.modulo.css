@@ -1,0 +1,24 @@
+.CardConsulta{
+    height: 50%;
+}
+
+.CardCenter{
+    height: 50%;
+    width: 50%;
+    min-width: 350px;
+    min-height: 350px;
+    max-height: 500px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid var(--global-color-azul-claro);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.CardCenter, div{
+    box-sizing: border-box;
+}

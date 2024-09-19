@@ -1,0 +1,27 @@
+.btn{
+    width: 100%;
+    max-width: 150px;
+    max-height: 40px;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-family: var(--global-font-family-Varela-Round);
+    font-size: 15px;
+    font-weight: 400; 
+    box-sizing: border-box;
+}
+.btn-entrar{
+    color: var(--global-color-azul-escuro);
+    background-color: transparent;
+    border-style: solid;
+    border-color:sol var(--global-color-azul-escuro);
+    transition: 1s;
+    box-sizing: border-box;
+}
+
+.btn-entrar:hover{
+    background-color: var(--global-color-Preto);
+    color: var(--global-color-azul-extra-claro);
+    box-sizing: border-box;
+}

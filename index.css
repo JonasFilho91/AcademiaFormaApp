@@ -1,0 +1,82 @@
+*{
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Dosis';
+
+}
+
+
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  --global-font-family-Varela-Round: "Varela Round", sans-serif;
+  --global-font-family-Dosis: "Dosis", sans-serif;
+  font-size:x-large;    
+  --global-color-Vermelho-logo:       rgba(255, 0, 0);
+  --global-color-azul-claro:          rgb(25, 136, 255);
+  --global-color-Preto-logo:          rgba(0, 0, 0);
+  --global-color-Roxo-logo:           rgba(255, 51, 153);
+}
+
+.ConteinerPrincipal{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  flex-direction: row;
+}
+
+.tabela{
+  width: 70%;
+  display: flex;
+  border-collapse: collapse;
+  color: black;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+tr{
+  height: 40px;
+  text-align: center;
+  color: black;
+  font-size: 1.2em;
+  border-radius: 5px 5px 0 0;
+
+}
+th{
+  background-color: rgb(204, 229, 255);
+  width: 200px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px 15px;
+  font-weight: 400;
+}
+.title{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-family: var(--global-font-family-Dosis);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--global-font-family-Dosis);
+}
