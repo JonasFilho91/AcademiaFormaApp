@@ -106,18 +106,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Função para criar uma assinatura no servidor
+        
         function criarAssinatura(plano) {
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('email').value;
     
-            // Verifica se os campos de nome e email estão preenchidos
+            
             if (!nome || !email) {
                 alert('Por favor, preencha todos os campos antes de continuar.');
                 return;
             }
     
-            // Requisição POST para criar o plano
+            
             fetch('https://parseapi.back4app.com/classes/Planos', {
                 method: 'POST',
                 headers: {
@@ -141,7 +141,7 @@
             });
         }
 
-        // Função para buscar os planos cadastrados
+
         function buscarPlanos() {
             fetch('https://parseapi.back4app.com/classes/Planos', {
                 method: 'GET',
@@ -161,10 +161,11 @@
             });
         }
 
-        // Função para exibir os planos na lista
-        function exibirPlanos(planos) {
+    
+        
+        function exibirPlanos(planos) { // Função para exibir os planos na página
             const listaPlanos = document.getElementById('listaPlanos');
-            listaPlanos.innerHTML = ''; // Limpa a lista antes de exibir os novos planos
+            listaPlanos.innerHTML = '';
 
             planos.forEach(plano => {
                 const li = document.createElement('li');
@@ -174,7 +175,43 @@
             });
         }
 
-        // Adiciona evento de clique para os botões de assinatura
+        function deletarPlano(id) {
+            fetch(`https://parseapi.back4app.com/classes/Planos/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Parse-Application-Id': 'O44FbeKcZNWC2JOxOQrqZWA8YIPmIBRqvFH0hPfg',
+                    'X-Parse-REST-API-Key': 'VwHDL79dcM9NQgTxhOsDMYODz5yTIjaOCS4EiWwO',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Plano deletado com sucesso!');
+                console.log('Sucesso:', data);
+                buscarPlanos(); // Atualiza a lista de planos após deletar
+            })
+            .catch(error => {
+                console.error('Erro ao deletar plano:', error);
+            });
+        }
+
+        function updatePlato(id) {
+            fetch(`https://parseapi.back4app.com/classes/Planos/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Parse-Application-Id': 'O44FbeKcZNWC2JOxOQrqZWA8YIPmIBRqvFH0hPfg',
+                    'X-Parse-REST-API-Key': 'VwHDL79dcM9NQgTxhOsDMYODz5yTIjaOCS4EiWwO',
+                },
+                body: JSON.stringify({
+                    Nome: 'Novo Nome',
+                    Email: 'Novo Email',
+                    Plano: 'Novo Plano'
+                })
+            }) 
+            .then(response => response.json())
+        }
+
         document.getElementById('btnAssinarBasico').addEventListener('click', function() {
             criarAssinatura('Básico');
         });
@@ -183,9 +220,9 @@
             criarAssinatura('Premium');
         });
 
-        // Buscar planos ao carregar a página
-        window.onload = buscarPlanos;
+        window.onload = buscarPlanos; //exibe os planos ao atualizar a pagina
     </script>
 
 </body>
 </html>
+        
