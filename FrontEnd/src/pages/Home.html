@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">AcademiaForma</a>
@@ -31,8 +30,7 @@
         </div>
     </nav>
 
-    <!-- Banner -->
-    <section id="banner" class="bg-dark text-white text-center p-5" style="background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover; height: 500px;">
+    <section id="banner" class="bg-dark text-white text-center p-5">
         <div class="container h-100 d-flex flex-column justify-content-center">
             <h1 class="display-4">Transforme seu corpo e mente</h1>
             <p class="lead">Venha conhecer nossos planos e estrutura!</p>
@@ -40,7 +38,6 @@
         </div>
     </section>
 
-    <!-- Sobre Nós -->
     <section id="sobre" class="py-5">
         <div class="container">
             <div class="row text-center">
@@ -52,40 +49,43 @@
         </div>
     </section>
 
-    <!-- Planos -->
-    <section id="planos" class="py-5 bg-light">
+    <!-- Formulário de assinatura -->
+    <section id="assinatura" class="py-5">
         <div class="container">
             <div class="row text-center mb-4">
                 <div class="col-lg-12">
-                    <h2>Nossos Planos</h2>
+                    <h2>Preencha seus dados para assinar um plano</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Plano Básico</h5>
-                            <p class="card-text">Acesso à academia de segunda a sexta.</p>
-                            <p class="card-text">R$ 99/mês</p>
-                            <a href="#" class="btn btn-outline-primary">Assinar</a>
+                    <form id="formAssinatura">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="button" id="btnAssinarBasico" class="btn btn-outline-primary">Assinar Plano Básico por 89,90</button>
+                            <button type="button" id="btnAssinarPremium" class="btn btn-outline-primary">Assinar Plano Premium por 99,00</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Plano Premium</h5>
-                            <p class="card-text">Acesso total, personal trainer e aulas exclusivas.</p>
-                            <p class="card-text">R$ 199/mês</p>
-                            <a href="#" class="btn btn-outline-primary">Assinar</a>
-                        </div>
-                    </div>
+            </div>
+
+            <!-- Div para exibir os planos -->
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h2 class="text-center">Planos Cadastrados</h2>
+                    <ul id="listaPlanos" class="list-group"></ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
     <section id="contato" class="py-5">
         <div class="container">
             <div class="row text-center">
@@ -100,13 +100,92 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
         <p>© 2024 AcademiaForma. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Função para criar uma assinatura no servidor
+        function criarAssinatura(plano) {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+    
+            // Verifica se os campos de nome e email estão preenchidos
+            if (!nome || !email) {
+                alert('Por favor, preencha todos os campos antes de continuar.');
+                return;
+            }
+    
+            // Requisição POST para criar o plano
+            fetch('https://parseapi.back4app.com/classes/Planos', {
+                method: 'POST',
+                headers: {
+                    "X-Parse-Application-Id": "O44FbeKcZNWC2JOxOQrqZWA8YIPmIBRqvFH0hPfg",
+                    "X-Parse-REST-API-Key": "VwHDL79dcM9NQgTxhOsDMYODz5yTIjaOCS4EiWwO",
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    Nome: nome,
+                    Email: email,
+                    Plano: plano
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Assinatura criada com sucesso para o plano: ' + plano);
+                console.log('Sucesso:', data);
+            })
+            .catch((error) => {
+                console.error('Erro:', error);
+            });
+        }
+
+        // Função para buscar os planos cadastrados
+        function buscarPlanos() {
+            fetch('https://parseapi.back4app.com/classes/Planos', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Parse-Application-Id': 'O44FbeKcZNWC2JOxOQrqZWA8YIPmIBRqvFH0hPfg',
+                    'X-Parse-REST-API-Key': 'VwHDL79dcM9NQgTxhOsDMYODz5yTIjaOCS4EiWwO',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Planos recebidos:', data);
+                exibirPlanos(data.results);  // Chama a função para exibir os planos na página
+            })
+            .catch(error => {
+                console.error('Erro ao buscar planos:', error);
+            });
+        }
+
+        // Função para exibir os planos na lista
+        function exibirPlanos(planos) {
+            const listaPlanos = document.getElementById('listaPlanos');
+            listaPlanos.innerHTML = ''; // Limpa a lista antes de exibir os novos planos
+
+            planos.forEach(plano => {
+                const li = document.createElement('li');
+                li.classList.add('list-group-item');
+                li.textContent = `Nome: ${plano.Nome}, Email: ${plano.Email}, Plano: ${plano.Plano}`;
+                listaPlanos.appendChild(li);
+            });
+        }
+
+        // Adiciona evento de clique para os botões de assinatura
+        document.getElementById('btnAssinarBasico').addEventListener('click', function() {
+            criarAssinatura('Básico');
+        });
+    
+        document.getElementById('btnAssinarPremium').addEventListener('click', function() {
+            criarAssinatura('Premium');
+        });
+
+        // Buscar planos ao carregar a página
+        window.onload = buscarPlanos;
+    </script>
 
 </body>
 </html>
